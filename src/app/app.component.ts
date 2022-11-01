@@ -20,16 +20,17 @@ export class AppComponent {
 
   }
 
-  selectUser(): void {
-    //this.currentUser =
+  selectUser(user: User): void {
+    this.currentUser = user;
   }
 
-  updateUser(): void {
-    this.userService.updateUser(this.currentUser)
+  updateUser(user: User): void {
+    this.userService.updateUser(user);
   }
 
-  deleteUser(): void {
-    this.userService.removeUser(this.currentUser)
+  deleteUser(user: User): void {
+    this.userService.removeUser(user);
+    user.id = 0;
   }
 
 }

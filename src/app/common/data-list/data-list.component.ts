@@ -21,28 +21,29 @@ export class DataListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSelectClick(): void {
-    this.selectClick.emit(this.dataRow);
-  }
-
-  onUpdateClick(): void {
-    this.updateClick.emit(this.dataRow);
-  }
-
-  onDeleteClick(): void {
-    this.deleteClick.emit(this.dataRow)
-  }
-
-  // onSelectClick(dataRow: User): void {
-  //   this.selectClick.emit(dataRow);
+  // onSelectClick(): void {
+  //   this.selectClick.emit(this.dataRow);
   // }
 
-  // onUpdateClick(dataRow: User): void {
-  //   this.updateClick.emit(dataRow);
+  // onUpdateClick(): void {
+  //   this.updateClick.emit(this.dataRow);
   // }
 
-  // onDeleteClick(dataRow: User): void {
-  //   this.deleteClick.emit(dataRow)
+  // onDeleteClick(): void {
+  //   this.deleteClick.emit(this.dataRow)
+  //   console.log('DataList', this.dataRow)
   // }
+
+  onSelectClick(dataRow: User): void {
+    this.selectClick.emit(dataRow);
+  }
+
+  onUpdateClick(dataRow: User): void {
+    this.updateClick.emit(dataRow);
+  }
+
+  onDeleteClick(dataRow: User): void {
+    this.deleteClick.emit(dataRow)
+  }
 
 }
