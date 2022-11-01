@@ -33,4 +33,16 @@ export class DataListComponent implements OnInit {
     this.deleteClick.emit(this.dataRow)
   }
 
+  // onSelectClick(dataRow: User): void {
+  //   this.selectClick.emit(dataRow);
+  // }
+
+  // onUpdateClick(dataRow: User): void {
+  //   this.updateClick.emit(dataRow);
+  // }
+
+  // onDeleteClick(dataRow: User): void {
+  //   this.deleteClick.emit(dataRow)
+  // }
+
 }

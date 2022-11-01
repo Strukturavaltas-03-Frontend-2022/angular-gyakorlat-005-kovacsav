@@ -9,6 +9,7 @@
 </div>
 <div class="row">
   <div class="col-12 mt-1 data-list-row">
-    <app-data-row *ngFor="let row of dataList" [row]="dataRow"></app-data-row> //(clicked)=""
+    <app-data-row *ngFor="let row of dataList" [dataRow]="row" (dataRow)="row" (selectClick)="onSelectClick(row)"
+      (updateClick)="onUpdateClick(row)" (deleteClick)="onDeleteClick(row)"></app-data-row>
   </div>
 </div>
